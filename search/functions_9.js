@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['run_178',['Run',['../class_jeremiah_1_1_game.html#a38db260bd7f91b4660455a91a396d453',1,'Jeremiah::Game']]]
+  ['quit_181',['Quit',['../class_jeremiah_1_1_game.html#a0d6b475f9e9b3a76408d9e7413b0e1e9',1,'Jeremiah::Game']]]
 ];

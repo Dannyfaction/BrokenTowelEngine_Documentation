@@ -1,13 +1,18 @@
 var hierarchy =
 [
     [ "Twl::AiController", "class_twl_1_1_ai_controller.html", null ],
-    [ "Twl::AIControllerComponent", "struct_twl_1_1_a_i_controller_component.html", null ],
     [ "Twl::AIControllerSystem", "class_twl_1_1_a_i_controller_system.html", null ],
     [ "Twl::Behaviour", "class_twl_1_1_behaviour.html", null ],
     [ "Twl::CharacterController", "class_twl_1_1_character_controller.html", null ],
-    [ "Twl::CharacterControllerComponent", "struct_twl_1_1_character_controller_component.html", null ],
     [ "Twl::CharacterControllerSystem", "class_twl_1_1_character_controller_system.html", null ],
     [ "Twl::Chunk", "struct_twl_1_1_chunk.html", null ],
+    [ "Twl::Component", "struct_twl_1_1_component.html", [
+      [ "Twl::AIControllerComponent", "struct_twl_1_1_a_i_controller_component.html", null ],
+      [ "Twl::CharacterControllerComponent", "struct_twl_1_1_character_controller_component.html", null ],
+      [ "Twl::ProjectileComponent", "struct_twl_1_1_projectile_component.html", null ],
+      [ "Twl::SpriteComponent", "struct_twl_1_1_sprite_component.html", null ],
+      [ "Twl::TransformComponent", "struct_twl_1_1_transform_component.html", null ]
+    ] ],
     [ "Twl::Core", "class_twl_1_1_core.html", null ],
     [ "Jeremiah::DX12CommandQueue", "class_jeremiah_1_1_d_x12_command_queue.html", null ],
     [ "Twl::DX12DeviceFactory", "class_twl_1_1_d_x12_device_factory.html", null ],
@@ -42,7 +47,6 @@ var hierarchy =
     [ "Twl::LevelReader", "class_twl_1_1_level_reader.html", null ],
     [ "Twl::MouseState", "struct_twl_1_1_mouse_state.html", null ],
     [ "Twl::OrthographicCamera", "class_twl_1_1_orthographic_camera.html", null ],
-    [ "Twl::ProjectileComponent", "struct_twl_1_1_projectile_component.html", null ],
     [ "Twl::ProjectileSystem", "class_twl_1_1_projectile_system.html", null ],
     [ "Twl::RenderImGui", "class_twl_1_1_render_im_gui.html", null ],
     [ "Twl::RenderSFML", "class_twl_1_1_render_s_f_m_l.html", null ],
@@ -54,10 +58,8 @@ var hierarchy =
     [ "Twl::ResourceManager", "class_twl_1_1_resource_manager.html", null ],
     [ "Twl::RomMount", "class_twl_1_1_rom_mount.html", null ],
     [ "Twl::SceneMaganger", "class_twl_1_1_scene_maganger.html", null ],
-    [ "Twl::SpriteComponent", "struct_twl_1_1_sprite_component.html", null ],
     [ "Twl::SpriteRenderer", "class_twl_1_1_sprite_renderer.html", null ],
     [ "Twl::Tileset", "struct_twl_1_1_tileset.html", null ],
-    [ "Twl::TransformComponent", "struct_twl_1_1_transform_component.html", null ],
     [ "Twl::TransformSystem", "class_twl_1_1_transform_system.html", null ],
     [ "Twl::WhiteBoard", "class_twl_1_1_white_board.html", null ],
     [ "Jeremiah::Window", "class_jeremiah_1_1_window.html", null ]

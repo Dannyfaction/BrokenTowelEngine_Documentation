@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['initialize_35',['Initialize',['../class_jeremiah_1_1_game.html#a51c5212d7e366fb2e9c9dca09fc1ef13',1,'Jeremiah::Game']]],
-  ['inputmanager_36',['InputManager',['../class_twl_1_1_input_manager.html',1,'Twl']]],
-  ['isfullscreen_37',['IsFullScreen',['../class_jeremiah_1_1_window.html#a0bb3e336073d1344865eddfe25bac065',1,'Jeremiah::Window']]],
-  ['isvsync_38',['IsVSync',['../class_jeremiah_1_1_window.html#a55df455914e682c155218e71b59a9c27',1,'Jeremiah::Window']]]
+  ['initialize_37',['Initialize',['../class_jeremiah_1_1_game.html#a51c5212d7e366fb2e9c9dca09fc1ef13',1,'Jeremiah::Game']]],
+  ['inputmanager_38',['InputManager',['../class_twl_1_1_input_manager.html',1,'Twl']]],
+  ['isfullscreen_39',['IsFullScreen',['../class_jeremiah_1_1_window.html#a0bb3e336073d1344865eddfe25bac065',1,'Jeremiah::Window']]],
+  ['isvsync_40',['IsVSync',['../class_jeremiah_1_1_window.html#a55df455914e682c155218e71b59a9c27',1,'Jeremiah::Window']]]
 ];

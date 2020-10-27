@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BrokenTowelEngine: Headers/ComponentSystem/TransformSystem.h Source File</title>
+<title>BrokenTowelEngine: ComponentSystem/TransformSystem.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -87,36 +87,25 @@ $(document).ready(function(){initNavTree('_transform_system_8h_source.html','');
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Components.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;entt/entt.hpp&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>Twl {</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_twl_1_1_transform_system.html">    7</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_twl_1_1_transform_system.html">TransformSystem</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="class_twl_1_1_transform_system.html">TransformSystem</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        ~<a class="code" href="class_twl_1_1_transform_system.html">TransformSystem</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordtype">void</span> UpdateTransforms(entt::registry&amp; a_Registry) {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <a class="code" href="class_twl_1_1_orthographic_camera.html">Twl::OrthographicCamera</a>* cam = &amp;Core::getInstance().GetCamera();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keyword">auto</span> view = a_Registry.view&lt;<a class="code" href="struct_twl_1_1_transform_component.html">TransformComponent</a>&gt;();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> entity : view) {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                <span class="keyword">auto</span>&amp; trans = view.get&lt;<a class="code" href="struct_twl_1_1_transform_component.html">TransformComponent</a>&gt;(entity);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                <span class="comment">//trans.position -= cam-&gt;m_Position;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                <span class="comment">// calculate transform specific stuff.....</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    };</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;entt/entt.hpp&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>Twl {</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_twl_1_1_transform_system.html">    6</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_twl_1_1_transform_system.html">TransformSystem</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <a class="code" href="class_twl_1_1_transform_system.html">TransformSystem</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        ~<a class="code" href="class_twl_1_1_transform_system.html">TransformSystem</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordtype">void</span> UpdateTransforms(entt::registry&amp; a_Registry);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    };</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_twl_1_1_transform_system_html"><div class="ttname"><a href="class_twl_1_1_transform_system.html">Twl::TransformSystem</a></div><div class="ttdef"><b>Definition:</b> TransformSystem.h:7</div></div>
-<div class="ttc" id="astruct_twl_1_1_transform_component_html"><div class="ttname"><a href="struct_twl_1_1_transform_component.html">Twl::TransformComponent</a></div><div class="ttdef"><b>Definition:</b> Components.h:8</div></div>
-<div class="ttc" id="aclass_twl_1_1_orthographic_camera_html"><div class="ttname"><a href="class_twl_1_1_orthographic_camera.html">Twl::OrthographicCamera</a></div><div class="ttdef"><b>Definition:</b> OrthographicCamera.h:7</div></div>
+<div class="ttc" id="aclass_twl_1_1_transform_system_html"><div class="ttname"><a href="class_twl_1_1_transform_system.html">Twl::TransformSystem</a></div><div class="ttdef"><b>Definition:</b> TransformSystem.h:6</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_692516b589a32b3bfce781ca9f6d1534.html">Headers</a></li><li class="navelem"><a class="el" href="dir_4ab64820a6af9c5625c2382068072819.html">ComponentSystem</a></li><li class="navelem"><b>TransformSystem.h</b></li>
+    <li class="navelem"><a class="el" href="dir_b785f7ecaaf6b97cb51bf318a25e25ac.html">ComponentSystem</a></li><li class="navelem"><b>TransformSystem.h</b></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

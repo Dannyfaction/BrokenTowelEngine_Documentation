@@ -24,6 +24,7 @@ var annotated_dup =
       [ "CharacterControllerComponent", "struct_twl_1_1_character_controller_component.html", "struct_twl_1_1_character_controller_component" ],
       [ "CharacterControllerSystem", "class_twl_1_1_character_controller_system.html", "class_twl_1_1_character_controller_system" ],
       [ "Chunk", "struct_twl_1_1_chunk.html", "struct_twl_1_1_chunk" ],
+      [ "Component", "struct_twl_1_1_component.html", "struct_twl_1_1_component" ],
       [ "Core", "class_twl_1_1_core.html", "class_twl_1_1_core" ],
       [ "DX12DeviceFactory", "class_twl_1_1_d_x12_device_factory.html", null ],
       [ "DX12GpuResourceManager", "class_twl_1_1_d_x12_gpu_resource_manager.html", "class_twl_1_1_d_x12_gpu_resource_manager" ],
