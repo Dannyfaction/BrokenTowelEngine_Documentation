@@ -83,7 +83,6 @@ $(document).ready(function(){initNavTree('class_twl_1_1_orthographic_camera.html
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_twl_1_1_orthographic_camera-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Twl::OrthographicCamera Class Reference</div>  </div>
@@ -92,30 +91,27 @@ $(document).ready(function(){initNavTree('class_twl_1_1_orthographic_camera.html
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab14cb2bcca217108aac6ae6b8f442189"><td class="memItemLeft" align="right" valign="top"><a id="ab14cb2bcca217108aac6ae6b8f442189"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> (glm::vec2 PlayerPos)</td></tr>
-<tr class="separator:ab14cb2bcca217108aac6ae6b8f442189"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3162098edce308ecf6bf27e1a9c7445a"><td class="memItemLeft" align="right" valign="top"><a id="a3162098edce308ecf6bf27e1a9c7445a"></a>
-const glm::vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetPosition</b> ()</td></tr>
-<tr class="separator:a3162098edce308ecf6bf27e1a9c7445a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a68ba30de7f9606976d4a5ad81c0dcb8c"><td class="memItemLeft" align="right" valign="top"><a id="a68ba30de7f9606976d4a5ad81c0dcb8c"></a>
-glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><b>View</b></td></tr>
-<tr class="separator:a68ba30de7f9606976d4a5ad81c0dcb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ca456185564470f6c07fc84f22cafdb"><td class="memItemLeft" align="right" valign="top"><a id="a1ca456185564470f6c07fc84f22cafdb"></a>
-glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><b>Projection</b></td></tr>
-<tr class="separator:a1ca456185564470f6c07fc84f22cafdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a840e34fad4fd29104681355250e50fa8"><td class="memItemLeft" align="right" valign="top"><a id="a840e34fad4fd29104681355250e50fa8"></a>
-glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>camera_eye</b></td></tr>
-<tr class="separator:a840e34fad4fd29104681355250e50fa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8742d5f3b6a4e2b34bbc2c203bbf2109"><td class="memItemLeft" align="right" valign="top"><a id="a8742d5f3b6a4e2b34bbc2c203bbf2109"></a>
-glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><b>m_Position</b></td></tr>
-<tr class="separator:a8742d5f3b6a4e2b34bbc2c203bbf2109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71a14e974d8e870f355adb8281d8a9e7"><td class="memItemLeft" align="right" valign="top"><a id="a71a14e974d8e870f355adb8281d8a9e7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>OrthographicCamera</b> (float left, float right, float bottom, float top)</td></tr>
+<tr class="separator:a71a14e974d8e870f355adb8281d8a9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e2868c38e9ca02fce057c9f7eace244"><td class="memItemLeft" align="right" valign="top"><a id="a2e2868c38e9ca02fce057c9f7eace244"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPosition</b> (const glm::vec3 &amp;position)</td></tr>
+<tr class="separator:a2e2868c38e9ca02fce057c9f7eace244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a999a9fcce8f6c1eae7da40030d301442"><td class="memItemLeft" align="right" valign="top"><a id="a999a9fcce8f6c1eae7da40030d301442"></a>
+const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetPosition</b> () const</td></tr>
+<tr class="separator:a999a9fcce8f6c1eae7da40030d301442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d08348c323cb66d20067b2c9e0198fd"><td class="memItemLeft" align="right" valign="top"><a id="a7d08348c323cb66d20067b2c9e0198fd"></a>
+const glm::mat4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetProjectionMatrix</b> () const</td></tr>
+<tr class="separator:a7d08348c323cb66d20067b2c9e0198fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76924f98c691c679fcd0269ad4ff7aab"><td class="memItemLeft" align="right" valign="top"><a id="a76924f98c691c679fcd0269ad4ff7aab"></a>
+const glm::mat4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetViewMatrix</b> () const</td></tr>
+<tr class="separator:a76924f98c691c679fcd0269ad4ff7aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a013d96b9275dcf669580e362a73153fe"><td class="memItemLeft" align="right" valign="top"><a id="a013d96b9275dcf669580e362a73153fe"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> (glm::vec3 a_PlayerPos)</td></tr>
+<tr class="separator:a013d96b9275dcf669580e362a73153fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="_orthographic_camera_8h_source.html">OrthographicCamera.h</a></li>
+<li>Headers/<a class="el" href="_orthographic_camera_8h_source.html">OrthographicCamera.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

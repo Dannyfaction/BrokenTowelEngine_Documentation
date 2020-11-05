@@ -1,11 +1,10 @@
 var class_twl_1_1_orthographic_camera =
 [
-    [ "OrthographicCamera", "class_twl_1_1_orthographic_camera.html#a2fed6dd7e87c2519445f085db2dfadf4", null ],
+    [ "OrthographicCamera", "class_twl_1_1_orthographic_camera.html#a71a14e974d8e870f355adb8281d8a9e7", null ],
     [ "~OrthographicCamera", "class_twl_1_1_orthographic_camera.html#a00a1219ca6cfb28c02c024a7bafc510c", null ],
-    [ "GetPosition", "class_twl_1_1_orthographic_camera.html#a3162098edce308ecf6bf27e1a9c7445a", null ],
-    [ "Update", "class_twl_1_1_orthographic_camera.html#ab14cb2bcca217108aac6ae6b8f442189", null ],
-    [ "camera_eye", "class_twl_1_1_orthographic_camera.html#a840e34fad4fd29104681355250e50fa8", null ],
-    [ "m_Position", "class_twl_1_1_orthographic_camera.html#a8742d5f3b6a4e2b34bbc2c203bbf2109", null ],
-    [ "Projection", "class_twl_1_1_orthographic_camera.html#a1ca456185564470f6c07fc84f22cafdb", null ],
-    [ "View", "class_twl_1_1_orthographic_camera.html#a68ba30de7f9606976d4a5ad81c0dcb8c", null ]
+    [ "GetPosition", "class_twl_1_1_orthographic_camera.html#a999a9fcce8f6c1eae7da40030d301442", null ],
+    [ "GetProjectionMatrix", "class_twl_1_1_orthographic_camera.html#a7d08348c323cb66d20067b2c9e0198fd", null ],
+    [ "GetViewMatrix", "class_twl_1_1_orthographic_camera.html#a76924f98c691c679fcd0269ad4ff7aab", null ],
+    [ "SetPosition", "class_twl_1_1_orthographic_camera.html#a2e2868c38e9ca02fce057c9f7eace244", null ],
+    [ "Update", "class_twl_1_1_orthographic_camera.html#a013d96b9275dcf669580e362a73153fe", null ]
 ];

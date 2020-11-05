@@ -99,6 +99,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a94c014707e8d2ae3ec5c58ee310e78c1"><td class="memItemLeft" align="right" valign="top"><a id="a94c014707e8d2ae3ec5c58ee310e78c1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>TransitionResource</b> (Microsoft::WRL::ComPtr&lt; ID3D12GraphicsCommandList &gt; commandList, Microsoft::WRL::ComPtr&lt; ID3D12Resource &gt; resource, D3D12_RESOURCE_STATES beforeState, D3D12_RESOURCE_STATES afterState)</td></tr>
 <tr class="separator:a94c014707e8d2ae3ec5c58ee310e78c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9f316622327bb92bcf39bf8ceedfe76"><td class="memItemLeft" align="right" valign="top"><a id="ae9f316622327bb92bcf39bf8ceedfe76"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ReadyTextures</b> (Microsoft::WRL::ComPtr&lt; ID3D12GraphicsCommandList &gt; commandList)</td></tr>
+<tr class="separator:ae9f316622327bb92bcf39bf8ceedfe76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3daa6e024c7d3a17444cb4fa3f1ea82a"><td class="memItemLeft" align="right" valign="top"><a id="a3daa6e024c7d3a17444cb4fa3f1ea82a"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>UploadVertexBuffer</b> (Microsoft::WRL::ComPtr&lt; ID3D12Device2 &gt; device, Microsoft::WRL::ComPtr&lt; ID3D12GraphicsCommandList &gt; commandList, size_t numElements, size_t elementSize, size_t stride, const void *bufferData, D3D12_RESOURCE_FLAGS flags=D3D12_RESOURCE_FLAG_NONE)</td></tr>
 <tr class="separator:a3daa6e024c7d3a17444cb4fa3f1ea82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,12 +120,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>InitMatrices</b> (int
 <tr class="memitem:a0324b081bd46a95ee04984c32a388dd5"><td class="memItemLeft" align="right" valign="top"><a id="a0324b081bd46a95ee04984c32a388dd5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>GetMatrices</b> (glm::mat4 &amp;model, glm::mat4 &amp;view, glm::mat4 &amp;projection)</td></tr>
 <tr class="separator:a0324b081bd46a95ee04984c32a388dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2e3f0bcf1dbcdd442a859a9b4749100"><td class="memItemLeft" align="right" valign="top"><a id="ac2e3f0bcf1dbcdd442a859a9b4749100"></a>
-const D3D12_VERTEX_BUFFER_VIEW&#160;</td><td class="memItemRight" valign="bottom"><b>GetVBView</b> (unsigned int index)</td></tr>
-<tr class="separator:ac2e3f0bcf1dbcdd442a859a9b4749100"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef16285d8ea698001395ed0c1d2daf58"><td class="memItemLeft" align="right" valign="top"><a id="aef16285d8ea698001395ed0c1d2daf58"></a>
-const D3D12_INDEX_BUFFER_VIEW&#160;</td><td class="memItemRight" valign="bottom"><b>GetIBView</b> (unsigned int index)</td></tr>
-<tr class="separator:aef16285d8ea698001395ed0c1d2daf58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69f8d93e4e3b7a614a6e35cf82296105"><td class="memItemLeft" align="right" valign="top"><a id="a69f8d93e4e3b7a614a6e35cf82296105"></a>
+const D3D12_VERTEX_BUFFER_VIEW&#160;</td><td class="memItemRight" valign="bottom"><b>GetVBView</b> (unsigned int index) const</td></tr>
+<tr class="separator:a69f8d93e4e3b7a614a6e35cf82296105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0f6fb95c9fc9ca3d4da8731a5ce175d"><td class="memItemLeft" align="right" valign="top"><a id="ae0f6fb95c9fc9ca3d4da8731a5ce175d"></a>
+const D3D12_INDEX_BUFFER_VIEW&#160;</td><td class="memItemRight" valign="bottom"><b>GetIBView</b> (unsigned int index) const</td></tr>
+<tr class="separator:ae0f6fb95c9fc9ca3d4da8731a5ce175d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a17400494c67dbbd855ff2805f3b010"><td class="memItemLeft" align="right" valign="top"><a id="a3a17400494c67dbbd855ff2805f3b010"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetNumIndices</b> (unsigned int index) const</td></tr>
+<tr class="separator:a3a17400494c67dbbd855ff2805f3b010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf7ade6daf9fed2d447efeff4de8b9e2"><td class="memItemLeft" align="right" valign="top"><a id="aaf7ade6daf9fed2d447efeff4de8b9e2"></a>
+ID3D12DescriptorHeap *&#160;</td><td class="memItemRight" valign="bottom"><b>GetTexDescriptorHeap</b> (unsigned int index) const</td></tr>
+<tr class="separator:aaf7ade6daf9fed2d447efeff4de8b9e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5a3b8b56936fc733cb22af99fa4611ef"></a>
@@ -152,7 +161,7 @@ const D3D12_INDEX_BUFFER_VIEW&#160;</td><td class="memItemRight" valign="bottom"
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>DirectX12/<a class="el" href="_d_x12_gpu_resource_manager_8h_source.html">DX12GpuResourceManager.h</a></li>
+<li>Headers/DirectX12/<a class="el" href="_d_x12_gpu_resource_manager_8h_source.html">DX12GpuResourceManager.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

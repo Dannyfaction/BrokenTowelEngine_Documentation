@@ -97,22 +97,97 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a517994aed2f0abb4085dc0a4d81b134c"><td class="memItemLeft" align="right" valign="top"><a id="a517994aed2f0abb4085dc0a4d81b134c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TransformComponent</b> (<a class="el" href="class_twl_1_1_entity.html">Entity</a> *a_Entity)</td></tr>
 <tr class="separator:a517994aed2f0abb4085dc0a4d81b134c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a1a64b9fcdf1f13c7643208b21e0efa"><td class="memItemLeft" align="right" valign="top"><a id="a0a1a64b9fcdf1f13c7643208b21e0efa"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TransformComponent</b> (glm::vec2 a_Position)</td></tr>
-<tr class="separator:a0a1a64b9fcdf1f13c7643208b21e0efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6882586b3531bb447b0f1fc9ee9b9c74"><td class="memItemLeft" align="right" valign="top"><a id="a6882586b3531bb447b0f1fc9ee9b9c74"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TransformComponent</b> (glm::vec3 a_Position)</td></tr>
+<tr class="separator:a6882586b3531bb447b0f1fc9ee9b9c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af85f5f05ab8f91d16db193bf11ed4950"><td class="memItemLeft" align="right" valign="top"><a id="af85f5f05ab8f91d16db193bf11ed4950"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPosition</b> (glm::vec3 a_Position)</td></tr>
+<tr class="separator:af85f5f05ab8f91d16db193bf11ed4950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b9f9873ae19eba50cb9585ad2b1cbc2"><td class="memItemLeft" align="right" valign="top"><a id="a1b9f9873ae19eba50cb9585ad2b1cbc2"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>GetPosition</b> ()</td></tr>
+<tr class="separator:a1b9f9873ae19eba50cb9585ad2b1cbc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae034442ad295cae44713c479f611a8f3"><td class="memItemLeft" align="right" valign="top"><a id="ae034442ad295cae44713c479f611a8f3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetScale</b> (glm::vec3 a_Scale)</td></tr>
+<tr class="separator:ae034442ad295cae44713c479f611a8f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b466d58cf66f9bcec67e395b065702"><td class="memItemLeft" align="right" valign="top"><a id="a16b466d58cf66f9bcec67e395b065702"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>GetScale</b> ()</td></tr>
+<tr class="separator:a16b466d58cf66f9bcec67e395b065702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a595c04476d7e5b49bbf5a7487a3678a7"><td class="memItemLeft" align="right" valign="top"><a id="a595c04476d7e5b49bbf5a7487a3678a7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetEulerAngles</b> (glm::vec3 a_Rotation)</td></tr>
+<tr class="separator:a595c04476d7e5b49bbf5a7487a3678a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae152edb34f83d56c03b73bc3929f679a"><td class="memItemLeft" align="right" valign="top"><a id="ae152edb34f83d56c03b73bc3929f679a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetRotation</b> (glm::quat a_qRotation)</td></tr>
+<tr class="separator:ae152edb34f83d56c03b73bc3929f679a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03914bd5960fe3cb3be71e4cc6b89d61"><td class="memItemLeft" align="right" valign="top"><a id="a03914bd5960fe3cb3be71e4cc6b89d61"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Translate</b> (glm::vec3 Velocity, float dt)</td></tr>
+<tr class="separator:a03914bd5960fe3cb3be71e4cc6b89d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f6ea09a559683cc544cff3051603dad"><td class="memItemLeft" align="right" valign="top"><a id="a0f6ea09a559683cc544cff3051603dad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Rotate</b> (glm::vec3 Velocity)</td></tr>
+<tr class="separator:a0f6ea09a559683cc544cff3051603dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73fe1fc8523064dfe7683b765662bb6a"><td class="memItemLeft" align="right" valign="top"><a id="a73fe1fc8523064dfe7683b765662bb6a"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>GetEulerAngles</b> ()</td></tr>
+<tr class="separator:a73fe1fc8523064dfe7683b765662bb6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ea35687e3bc347236afd53f9fdbdf9e"><td class="memItemLeft" align="right" valign="top"><a id="a6ea35687e3bc347236afd53f9fdbdf9e"></a>
+glm::quat&#160;</td><td class="memItemRight" valign="bottom"><b>GetRotation</b> ()</td></tr>
+<tr class="separator:a6ea35687e3bc347236afd53f9fdbdf9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20f441a98c21ea9b3a2bbcb46c6ebce4"><td class="memItemLeft" align="right" valign="top"><a id="a20f441a98c21ea9b3a2bbcb46c6ebce4"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>GetRight</b> ()</td></tr>
+<tr class="separator:a20f441a98c21ea9b3a2bbcb46c6ebce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac839c748b97a2601b376690b7ce74da6"><td class="memItemLeft" align="right" valign="top"><a id="ac839c748b97a2601b376690b7ce74da6"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>GetLeft</b> ()</td></tr>
+<tr class="separator:ac839c748b97a2601b376690b7ce74da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae64edad656b07e8092d0a1b422c29a08"><td class="memItemLeft" align="right" valign="top"><a id="ae64edad656b07e8092d0a1b422c29a08"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>GetUp</b> ()</td></tr>
+<tr class="separator:ae64edad656b07e8092d0a1b422c29a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f6e8eb2f2791fee4f095c86c33a4502"><td class="memItemLeft" align="right" valign="top"><a id="a7f6e8eb2f2791fee4f095c86c33a4502"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>GetDown</b> ()</td></tr>
+<tr class="separator:a7f6e8eb2f2791fee4f095c86c33a4502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59df62fc285a7ca447374dff8374b363"><td class="memItemLeft" align="right" valign="top"><a id="a59df62fc285a7ca447374dff8374b363"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>GetForward</b> ()</td></tr>
+<tr class="separator:a59df62fc285a7ca447374dff8374b363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b0d95845d2f18e19c187b73ef594981"><td class="memItemLeft" align="right" valign="top"><a id="a5b0d95845d2f18e19c187b73ef594981"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>GetBackward</b> ()</td></tr>
+<tr class="separator:a5b0d95845d2f18e19c187b73ef594981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa11c980aceb260577249564464364b3f"><td class="memItemLeft" align="right" valign="top"><a id="aa11c980aceb260577249564464364b3f"></a>
+glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><b>GetMatrix</b> ()</td></tr>
+<tr class="separator:aa11c980aceb260577249564464364b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ab5cdd7f7a435f6f2ce0d677ca5433429"><td class="memItemLeft" align="right" valign="top"><a id="ab5cdd7f7a435f6f2ce0d677ca5433429"></a>
-glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><b>position</b></td></tr>
-<tr class="separator:ab5cdd7f7a435f6f2ce0d677ca5433429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeda1f98f8727d5cfd8efc929f4e3327"><td class="memItemLeft" align="right" valign="top"><a id="aeeda1f98f8727d5cfd8efc929f4e3327"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>Position</b></td></tr>
+<tr class="separator:aeeda1f98f8727d5cfd8efc929f4e3327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e46ac682ace37805a059843691055fc"><td class="memItemLeft" align="right" valign="top"><a id="a8e46ac682ace37805a059843691055fc"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>Scale</b></td></tr>
+<tr class="separator:a8e46ac682ace37805a059843691055fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c0137f70eaac3f8933cdb20822bb614"><td class="memItemLeft" align="right" valign="top"><a id="a7c0137f70eaac3f8933cdb20822bb614"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>Rotation</b></td></tr>
+<tr class="separator:a7c0137f70eaac3f8933cdb20822bb614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4630a87a2a777f2d4bee3e1ee460f0d1"><td class="memItemLeft" align="right" valign="top"><a id="a4630a87a2a777f2d4bee3e1ee460f0d1"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>Forward</b></td></tr>
+<tr class="separator:a4630a87a2a777f2d4bee3e1ee460f0d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aa1d2cc1be1b48a5cf6fe0eec8473b2"><td class="memItemLeft" align="right" valign="top"><a id="a4aa1d2cc1be1b48a5cf6fe0eec8473b2"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>Up</b></td></tr>
+<tr class="separator:a4aa1d2cc1be1b48a5cf6fe0eec8473b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab499d5b1b32007522f202d574a65308e"><td class="memItemLeft" align="right" valign="top"><a id="ab499d5b1b32007522f202d574a65308e"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>Right</b></td></tr>
+<tr class="separator:ab499d5b1b32007522f202d574a65308e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2457904619c028ea834a0c4671c5686f"><td class="memItemLeft" align="right" valign="top"><a id="a2457904619c028ea834a0c4671c5686f"></a>
+glm::quat&#160;</td><td class="memItemRight" valign="bottom"><b>qRotation</b></td></tr>
+<tr class="separator:a2457904619c028ea834a0c4671c5686f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c72ce6022f9be1fdaeed9fec6286f26"><td class="memItemLeft" align="right" valign="top"><a id="a5c72ce6022f9be1fdaeed9fec6286f26"></a>
+glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><b>ModelMatrix</b></td></tr>
+<tr class="separator:a5c72ce6022f9be1fdaeed9fec6286f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a581feaf6019db2c3167916c13ec2e61e"><td class="memItemLeft" align="right" valign="top"><a id="a581feaf6019db2c3167916c13ec2e61e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>dirtyFlag</b></td></tr>
+<tr class="separator:a581feaf6019db2c3167916c13ec2e61e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_struct_twl_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_struct_twl_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="struct_twl_1_1_component.html">Twl::Component</a></td></tr>
 <tr class="memitem:acf47dd992dd9fa7da301b2f068bdb4cb inherit pub_attribs_struct_twl_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="acf47dd992dd9fa7da301b2f068bdb4cb"></a>
 <a class="el" href="class_twl_1_1_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>entity</b></td></tr>
 <tr class="separator:acf47dd992dd9fa7da301b2f068bdb4cb inherit pub_attribs_struct_twl_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>ComponentSystem/Components/<a class="el" href="_transform_component_8h_source.html">TransformComponent.h</a></li>
+<li>Headers/ComponentSystem/Components/<a class="el" href="_transform_component_8h_source.html">TransformComponent.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

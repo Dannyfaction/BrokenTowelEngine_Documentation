@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BrokenTowelEngine: DirectX12/DX12GpuResourceManager.h Source File</title>
+<title>BrokenTowelEngine: Headers/DirectX12/DX12GpuResourceManager.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -115,62 +115,69 @@ $(document).ready(function(){initNavTree('_d_x12_gpu_resource_manager_8h_source.
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt; resource,</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            D3D12_RESOURCE_STATES beforeState, D3D12_RESOURCE_STATES afterState);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">// Returns the index of the uploaded vertex buffer in m_VertexBuffers</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">int</span> UploadVertexBuffer(Microsoft::WRL::ComPtr&lt;ID3D12Device2&gt; device,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            Microsoft::WRL::ComPtr&lt;ID3D12GraphicsCommandList&gt; commandList,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordtype">size_t</span> numElements, <span class="keywordtype">size_t</span> elementSize, <span class="keywordtype">size_t</span> stride,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">void</span>* bufferData, D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">// Returns the index of the uploaded index buffer in m_IndexBuffers</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">int</span> UploadIndexBuffer(Microsoft::WRL::ComPtr&lt;ID3D12Device2&gt; device,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            Microsoft::WRL::ComPtr&lt;ID3D12GraphicsCommandList&gt; commandList,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordtype">size_t</span> numElements, <span class="keywordtype">size_t</span> elementSize,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">void</span>* bufferData, D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">int</span> UploadTextureBuffer(Microsoft::WRL::ComPtr&lt;ID3D12Device2&gt; device,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            Microsoft::WRL::ComPtr&lt;ID3D12GraphicsCommandList&gt; commandList,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordtype">int</span> texWidth, <span class="keywordtype">int</span> texHeight, <span class="keyword">const</span> <span class="keywordtype">void</span>* bufferData,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> DeleteIntermediateBuffers();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> InitMatrices(<span class="keywordtype">int</span> clientWidth, <span class="keywordtype">int</span> clientHeight); <span class="comment">//Demo function, will be removed later</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> GetMatrices(glm::mat4&amp; model, glm::mat4&amp; view, glm::mat4&amp; projection) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            model = m_ModelMatrix;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            view = m_ViewMatrix;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            projection = m_ProjectionMatrix;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">const</span> D3D12_VERTEX_BUFFER_VIEW GetVBView(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">const</span> D3D12_INDEX_BUFFER_VIEW GetIBView(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">// Helper function, transitions all textures to be used in the pixel shader</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> ReadyTextures(Microsoft::WRL::ComPtr&lt;ID3D12GraphicsCommandList&gt; commandList);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">// Returns the index of the uploaded vertex buffer in m_VertexBuffers</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">int</span> UploadVertexBuffer(Microsoft::WRL::ComPtr&lt;ID3D12Device2&gt; device,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            Microsoft::WRL::ComPtr&lt;ID3D12GraphicsCommandList&gt; commandList,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordtype">size_t</span> numElements, <span class="keywordtype">size_t</span> elementSize, <span class="keywordtype">size_t</span> stride,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">void</span>* bufferData, D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">// Returns the index of the uploaded index buffer in m_IndexBuffers</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">int</span> UploadIndexBuffer(Microsoft::WRL::ComPtr&lt;ID3D12Device2&gt; device,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            Microsoft::WRL::ComPtr&lt;ID3D12GraphicsCommandList&gt; commandList,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordtype">size_t</span> numElements, <span class="keywordtype">size_t</span> elementSize,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">void</span>* bufferData, D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">int</span> UploadTextureBuffer(Microsoft::WRL::ComPtr&lt;ID3D12Device2&gt; device,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            Microsoft::WRL::ComPtr&lt;ID3D12GraphicsCommandList&gt; commandList,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordtype">int</span> texWidth, <span class="keywordtype">int</span> texHeight, <span class="keyword">const</span> <span class="keywordtype">void</span>* bufferData,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> DeleteIntermediateBuffers();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> InitMatrices(<span class="keywordtype">int</span> clientWidth, <span class="keywordtype">int</span> clientHeight); <span class="comment">//Demo function, will be removed later</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> GetMatrices(glm::mat4&amp; model, glm::mat4&amp; view, glm::mat4&amp; projection) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            model = m_ModelMatrix;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            view = m_ViewMatrix;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            projection = m_ProjectionMatrix;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">// Create or change a GPU buffer.</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">void</span> UpdateBufferResource(Microsoft::WRL::ComPtr&lt;ID3D12Device2&gt; device,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            Microsoft::WRL::ComPtr&lt;ID3D12GraphicsCommandList&gt; commandList,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            ID3D12Resource** pDestinationResource, ID3D12Resource** pIntermediateResource,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordtype">size_t</span> bufferSize, <span class="keyword">const</span> <span class="keywordtype">void</span>* bufferData,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            CD3DX12_RESOURCE_DESC bufferDesc,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE,</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            D3D12_SUBRESOURCE_DATA* subresourceData = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        std::vector&lt;Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt;&gt; m_VertexBuffers;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        std::vector&lt;D3D12_VERTEX_BUFFER_VIEW&gt; m_VertexBufferViews;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        std::vector&lt;Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt;&gt; m_IndexBuffers;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        std::vector&lt;D3D12_INDEX_BUFFER_VIEW&gt; m_IndexBufferViews;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        std::vector&lt;Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt;&gt; m_TextureBuffers;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        std::vector&lt;CD3DX12_RESOURCE_DESC&gt; m_TextureBufferViews;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">float</span> m_FoV;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">const</span> D3D12_VERTEX_BUFFER_VIEW GetVBView(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">const</span> D3D12_INDEX_BUFFER_VIEW GetIBView(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">int</span> GetNumIndices(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        ID3D12DescriptorHeap* GetTexDescriptorHeap(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// Create or change a GPU buffer.</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> UpdateBufferResource(Microsoft::WRL::ComPtr&lt;ID3D12Device2&gt; device,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            Microsoft::WRL::ComPtr&lt;ID3D12GraphicsCommandList&gt; commandList,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            ID3D12Resource** pDestinationResource, ID3D12Resource** pIntermediateResource,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordtype">size_t</span> bufferSize, <span class="keyword">const</span> <span class="keywordtype">void</span>* bufferData,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            CD3DX12_RESOURCE_DESC bufferDesc,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            D3D12_SUBRESOURCE_DATA* subresourceData = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        std::vector&lt;Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt;&gt; m_VertexBuffers;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        std::vector&lt;D3D12_VERTEX_BUFFER_VIEW&gt; m_VertexBufferViews;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        std::vector&lt;Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt;&gt; m_IndexBuffers;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        std::vector&lt;D3D12_INDEX_BUFFER_VIEW&gt; m_IndexBufferViews;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        glm::mat4 m_ModelMatrix;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        glm::mat4 m_ViewMatrix;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        glm::mat4 m_ProjectionMatrix;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    };</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::vector&lt;Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt;&gt; m_TextureBuffers;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        std::vector&lt;Microsoft::WRL::ComPtr&lt;ID3D12DescriptorHeap&gt;&gt; m_TextureDescriptorHeaps;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">//std::vector&lt;D3D12_SHADER_RESOURCE_VIEW_DESC&gt; m_ShaderResourceViews;</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">bool</span> VBUploaded = <span class="keyword">false</span>, IBUploaded = <span class="keyword">false</span>, TBUploaded = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">float</span> m_FoV;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        glm::mat4 m_ModelMatrix;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        glm::mat4 m_ViewMatrix;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        glm::mat4 m_ProjectionMatrix;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    };</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_twl_1_1_d_x12_gpu_resource_manager_html_a5a3b8b56936fc733cb22af99fa4611ef"><div class="ttname"><a href="class_twl_1_1_d_x12_gpu_resource_manager.html#a5a3b8b56936fc733cb22af99fa4611ef">Twl::DX12GpuResourceManager::UnloadContent</a></div><div class="ttdeci">virtual void UnloadContent()</div><div class="ttdef"><b>Definition:</b> DX12GpuResourceManager.h:26</div></div>
@@ -179,7 +186,7 @@ $(document).ready(function(){initNavTree('_d_x12_gpu_resource_manager_8h_source.
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_894dafc3112dcc2c88691c3e50df42eb.html">DirectX12</a></li><li class="navelem"><b>DX12GpuResourceManager.h</b></li>
+    <li class="navelem"><a class="el" href="dir_692516b589a32b3bfce781ca9f6d1534.html">Headers</a></li><li class="navelem"><a class="el" href="dir_f1abcdcbfd390108e06d4fe89b391a3e.html">DirectX12</a></li><li class="navelem"><b>DX12GpuResourceManager.h</b></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

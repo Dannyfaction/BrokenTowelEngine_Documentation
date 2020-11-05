@@ -11,10 +11,8 @@ var class_twl_1_1_d_x12_renderer =
     [ "GetRootSignature", "class_twl_1_1_d_x12_renderer.html#ad59fcb3ec9e606e08e8869f6f9d62f03", null ],
     [ "GetScissorRect", "class_twl_1_1_d_x12_renderer.html#aaaf9e3541fa15a5ebb07844df29b039d", null ],
     [ "GetViewPort", "class_twl_1_1_d_x12_renderer.html#a997ea8f6c9bb63a9c163bccd0dd5a078", null ],
-    [ "LoadShaders", "class_twl_1_1_d_x12_renderer.html#a33114b3c55b38961e0ec680f52ec22ae", null ],
-    [ "MakeRootSignature", "class_twl_1_1_d_x12_renderer.html#a6d5209c978f264d59f5a7841f59125d2", null ],
     [ "Render", "class_twl_1_1_d_x12_renderer.html#acc84a28c215b319ca3ca268a000b42a0", null ],
     [ "ResizeViewport", "class_twl_1_1_d_x12_renderer.html#a297ed511efa12bfab5cf92ea9f074bd7", null ],
-    [ "SetUpPipeline", "class_twl_1_1_d_x12_renderer.html#ad73ac444c8073a749dceee8897ca7f5d", null ],
+    [ "UploadSpriteData", "class_twl_1_1_d_x12_renderer.html#a4c76fa692f9e4c239ef6d64e3c3d6610", null ],
     [ "UploadSpriteData", "class_twl_1_1_d_x12_renderer.html#ac115804c4347cbff8896ae15c92ef2af", null ]
 ];

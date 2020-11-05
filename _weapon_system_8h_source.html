@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BrokenTowelEngine: ComponentSystem/WeaponSystem.h Source File</title>
+<title>BrokenTowelEngine: Headers/ComponentSystem/WeaponSystem.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -87,27 +87,43 @@ $(document).ready(function(){initNavTree('_weapon_system_8h_source.html',''); in
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Components.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;entt/entt.hpp&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>Twl </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">class </span>Core;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">class </span>ProjectileSystem</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        ProjectileSystem() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        ~ProjectileSystem() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">void</span> UpdateProjectileSystem(entt::registry&amp; a_Registry);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    };</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;entt/entt.hpp&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Core.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Scene.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>Twl</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">class </span>Core;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_twl_1_1_weapon_system.html">   12</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_twl_1_1_weapon_system.html">WeaponSystem</a> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">private</span>: </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span> RELOAD_TIME = 100.0f;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span> BULLET_LIFE_TIME = 120.0f;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">float</span> m_ReloadTime = RELOAD_TIME;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">float</span> m_BulletLifeTime = BULLET_LIFE_TIME;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::shared_ptr&lt;Scene&gt; scene = Core::getInstance().GetSceneManager().CurrentScene();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::vector&lt;Entity*&gt; m_BulletList;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_twl_1_1_weapon_system.html">WeaponSystem</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        ~<a class="code" href="class_twl_1_1_weapon_system.html">WeaponSystem</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> UpdateWeaponSystem(entt::registry&amp; a_Registry  <span class="comment">/*, float a_DeltaTime*/</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">void</span> Shoot();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">bool</span> Reloaded();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> DestroyBullet();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">bool</span> BulletLifeTime();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    };</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_twl_1_1_weapon_system_html"><div class="ttname"><a href="class_twl_1_1_weapon_system.html">Twl::WeaponSystem</a></div><div class="ttdef"><b>Definition:</b> WeaponSystem.h:13</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_b785f7ecaaf6b97cb51bf318a25e25ac.html">ComponentSystem</a></li><li class="navelem"><b>WeaponSystem.h</b></li>
+    <li class="navelem"><a class="el" href="dir_692516b589a32b3bfce781ca9f6d1534.html">Headers</a></li><li class="navelem"><a class="el" href="dir_4ab64820a6af9c5625c2382068072819.html">ComponentSystem</a></li><li class="navelem"><b>WeaponSystem.h</b></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

@@ -6,5 +6,5 @@ var class_twl_1_1_windows_input =
     [ "GetKey", "class_twl_1_1_windows_input.html#a3447ef8f8a2a9f18df512ab946736bb2", null ],
     [ "GetKeyOnce", "class_twl_1_1_windows_input.html#ab628364dc00ebb68cf23f9445778cb81", null ],
     [ "Update", "class_twl_1_1_windows_input.html#a621cbd40155bf744badca606803ce347", null ],
-    [ "Update", "class_twl_1_1_windows_input.html#ab3c1d5f35c159980ba484cbeb9762e53", null ]
+    [ "Update", "class_twl_1_1_windows_input.html#a6a92e89080e73c3f51b7a539e396e683", null ]
 ];

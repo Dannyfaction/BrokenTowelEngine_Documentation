@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BrokenTowelEngine: DirectX12/Game.h Source File</title>
+<title>BrokenTowelEngine: Headers/DirectX12/Game.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -118,81 +118,79 @@ $(document).ready(function(){initNavTree('_game_8h_source.html',''); initResizab
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;wrl.h&gt;</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span>Twl {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">class </span>DX12GpuResourceManager;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">class </span>DX12Renderer;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">namespace </span>Jeremiah {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">class </span>Window;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">class </span>DX12CommandQueue;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html">   49</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_jeremiah_1_1_game.html">Game</a> : <span class="keyword">public</span> std::enable_shared_from_this&lt;Jeremiah::Game&gt;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a08ba03a27dd117ee31e7a04e99bf3f75">   55</a></span>&#160;        <a class="code" href="class_jeremiah_1_1_game.html#a08ba03a27dd117ee31e7a04e99bf3f75">Game</a>(HINSTANCE instance, <span class="keyword">const</span> std::wstring&amp; name, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">bool</span> vSync);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="class_jeremiah_1_1_game.html">Game</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">int</span> GetClientWidth()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">return</span> m_Width;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">int</span> GetClientHeight()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> m_Height;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a51c5212d7e366fb2e9c9dca09fc1ef13">   71</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_jeremiah_1_1_game.html#a51c5212d7e366fb2e9c9dca09fc1ef13">Initialize</a>();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a38db260bd7f91b4660455a91a396d453">   77</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_jeremiah_1_1_game.html#a38db260bd7f91b4660455a91a396d453">Run</a>();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a0d6b475f9e9b3a76408d9e7413b0e1e9">   83</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#a0d6b475f9e9b3a76408d9e7413b0e1e9">Quit</a>(<span class="keywordtype">int</span> exitCode = 0);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a24f6c33be76ac3b5c23bf20cf5a3601c">   88</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#a24f6c33be76ac3b5c23bf20cf5a3601c">Destroy</a>();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#af0c7957fb1445b318bd6ad6e7b192743">   93</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#af0c7957fb1445b318bd6ad6e7b192743">OnUpdate</a>(<a class="code" href="class_jeremiah_1_1_update_event_args.html">Jeremiah::UpdateEventArgs</a>&amp; e);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a137aeac9584d23317f4a78d1f1defbb7">   98</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#a137aeac9584d23317f4a78d1f1defbb7">OnRender</a>(<a class="code" href="class_jeremiah_1_1_render_event_args.html">Jeremiah::RenderEventArgs</a>&amp; e);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#ac28e73f55e1b9c28b992de6adb99c7ff">  104</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#ac28e73f55e1b9c28b992de6adb99c7ff">OnKeyPressed</a>(<a class="code" href="class_jeremiah_1_1_key_event_args.html">Jeremiah::KeyEventArgs</a>&amp; e);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#ad9e057f0b619162f8c437eb4f9de2915">  109</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#ad9e057f0b619162f8c437eb4f9de2915">OnKeyReleased</a>(<a class="code" href="class_jeremiah_1_1_key_event_args.html">Jeremiah::KeyEventArgs</a>&amp; e);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a5e639448d4db2ff50933d7a2620cbc29">  114</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#a5e639448d4db2ff50933d7a2620cbc29">OnMouseMoved</a>(<a class="code" href="class_jeremiah_1_1_mouse_motion_event_args.html">Jeremiah::MouseMotionEventArgs</a>&amp; e);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a63a5f48dee1e347bef5d6b6b21cda76f">  119</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#a63a5f48dee1e347bef5d6b6b21cda76f">OnMouseButtonPressed</a>(<a class="code" href="class_jeremiah_1_1_mouse_button_event_args.html">Jeremiah::MouseButtonEventArgs</a>&amp; e);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#aa91b7e7abf5fe4d7f804769436e06d54">  124</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#aa91b7e7abf5fe4d7f804769436e06d54">OnMouseButtonReleased</a>(<a class="code" href="class_jeremiah_1_1_mouse_button_event_args.html">Jeremiah::MouseButtonEventArgs</a>&amp; e);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a4301d66da2ea3ab7894422b164dfe17a">  129</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#a4301d66da2ea3ab7894422b164dfe17a">OnMouseWheel</a>(<a class="code" href="class_jeremiah_1_1_mouse_wheel_event_args.html">Jeremiah::MouseWheelEventArgs</a>&amp; e);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a506625f10dcda492370093024b607c5b">  134</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#a506625f10dcda492370093024b607c5b">OnResize</a>(<a class="code" href="class_jeremiah_1_1_resize_event_args.html">Jeremiah::ResizeEventArgs</a>&amp; e);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a5127240c521099c53f8a51610e3564b7">  139</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#a5127240c521099c53f8a51610e3564b7">OnWindowDestroy</a>();</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#ad3d632f155d42da66677239a8c1b77d5">  144</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#ad3d632f155d42da66677239a8c1b77d5">Flush</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">class </span>DX12Renderer;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">namespace </span>Jeremiah {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">class </span>Window;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html">   47</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_jeremiah_1_1_game.html">Game</a> : <span class="keyword">public</span> std::enable_shared_from_this&lt;Jeremiah::Game&gt;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a08ba03a27dd117ee31e7a04e99bf3f75">   53</a></span>&#160;        <a class="code" href="class_jeremiah_1_1_game.html#a08ba03a27dd117ee31e7a04e99bf3f75">Game</a>(HINSTANCE instance, <span class="keyword">const</span> std::wstring&amp; name, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">bool</span> vSync);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="class_jeremiah_1_1_game.html">Game</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">int</span> GetClientWidth()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> m_Width;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">int</span> GetClientHeight()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> m_Height;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a51c5212d7e366fb2e9c9dca09fc1ef13">   69</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_jeremiah_1_1_game.html#a51c5212d7e366fb2e9c9dca09fc1ef13">Initialize</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a38db260bd7f91b4660455a91a396d453">   75</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_jeremiah_1_1_game.html#a38db260bd7f91b4660455a91a396d453">Run</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a0d6b475f9e9b3a76408d9e7413b0e1e9">   81</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#a0d6b475f9e9b3a76408d9e7413b0e1e9">Quit</a>(<span class="keywordtype">int</span> exitCode = 0);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a24f6c33be76ac3b5c23bf20cf5a3601c">   86</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#a24f6c33be76ac3b5c23bf20cf5a3601c">Destroy</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#af0c7957fb1445b318bd6ad6e7b192743">   91</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#af0c7957fb1445b318bd6ad6e7b192743">OnUpdate</a>(<a class="code" href="class_jeremiah_1_1_update_event_args.html">Jeremiah::UpdateEventArgs</a>&amp; e);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a137aeac9584d23317f4a78d1f1defbb7">   96</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#a137aeac9584d23317f4a78d1f1defbb7">OnRender</a>(<a class="code" href="class_jeremiah_1_1_render_event_args.html">Jeremiah::RenderEventArgs</a>&amp; e);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#ac28e73f55e1b9c28b992de6adb99c7ff">  102</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#ac28e73f55e1b9c28b992de6adb99c7ff">OnKeyPressed</a>(<a class="code" href="class_jeremiah_1_1_key_event_args.html">Jeremiah::KeyEventArgs</a>&amp; e);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#ad9e057f0b619162f8c437eb4f9de2915">  107</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#ad9e057f0b619162f8c437eb4f9de2915">OnKeyReleased</a>(<a class="code" href="class_jeremiah_1_1_key_event_args.html">Jeremiah::KeyEventArgs</a>&amp; e);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a5e639448d4db2ff50933d7a2620cbc29">  112</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#a5e639448d4db2ff50933d7a2620cbc29">OnMouseMoved</a>(<a class="code" href="class_jeremiah_1_1_mouse_motion_event_args.html">Jeremiah::MouseMotionEventArgs</a>&amp; e);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a63a5f48dee1e347bef5d6b6b21cda76f">  117</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#a63a5f48dee1e347bef5d6b6b21cda76f">OnMouseButtonPressed</a>(<a class="code" href="class_jeremiah_1_1_mouse_button_event_args.html">Jeremiah::MouseButtonEventArgs</a>&amp; e);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#aa91b7e7abf5fe4d7f804769436e06d54">  122</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#aa91b7e7abf5fe4d7f804769436e06d54">OnMouseButtonReleased</a>(<a class="code" href="class_jeremiah_1_1_mouse_button_event_args.html">Jeremiah::MouseButtonEventArgs</a>&amp; e);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a4301d66da2ea3ab7894422b164dfe17a">  127</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#a4301d66da2ea3ab7894422b164dfe17a">OnMouseWheel</a>(<a class="code" href="class_jeremiah_1_1_mouse_wheel_event_args.html">Jeremiah::MouseWheelEventArgs</a>&amp; e);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a506625f10dcda492370093024b607c5b">  132</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#a506625f10dcda492370093024b607c5b">OnResize</a>(<a class="code" href="class_jeremiah_1_1_resize_event_args.html">Jeremiah::ResizeEventArgs</a>&amp; e);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#a5127240c521099c53f8a51610e3564b7">  137</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#a5127240c521099c53f8a51610e3564b7">OnWindowDestroy</a>();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="class_jeremiah_1_1_game.html#ad3d632f155d42da66677239a8c1b77d5">  142</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_jeremiah_1_1_game.html#ad3d632f155d42da66677239a8c1b77d5">Flush</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keyword">const</span> Microsoft::WRL::ComPtr&lt;ID3D12Device2&gt; GetDevice() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keyword">const</span> Microsoft::WRL::ComPtr&lt;ID3D12Device2&gt; GetDevice() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="comment">//Don&#39;t copy or reassign this class</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <a class="code" href="class_jeremiah_1_1_game.html#a08ba03a27dd117ee31e7a04e99bf3f75">Game</a>(<span class="keyword">const</span> <a class="code" href="class_jeremiah_1_1_game.html">Game</a>&amp; copy) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <a class="code" href="class_jeremiah_1_1_game.html">Game</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_jeremiah_1_1_game.html">Game</a>&amp; other) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        std::shared_ptr&lt;Window&gt; CreateRenderWindow(<span class="keyword">const</span> std::wstring&amp; windowName, <span class="keywordtype">int</span> clientWidth, <span class="keywordtype">int</span> clientHeight, <span class="keywordtype">bool</span> vSync = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="comment">//Don&#39;t copy or reassign this class</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <a class="code" href="class_jeremiah_1_1_game.html#a08ba03a27dd117ee31e7a04e99bf3f75">Game</a>(<span class="keyword">const</span> <a class="code" href="class_jeremiah_1_1_game.html">Game</a>&amp; copy) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="class_jeremiah_1_1_game.html">Game</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_jeremiah_1_1_game.html">Game</a>&amp; other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        std::shared_ptr&lt;Window&gt; CreateRenderWindow(<span class="keyword">const</span> std::wstring&amp; windowName, <span class="keywordtype">int</span> clientWidth, <span class="keywordtype">int</span> clientHeight, <span class="keywordtype">bool</span> vSync = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="class_twl_1_1_d_x12_renderer.html">Twl::DX12Renderer</a>* m_Renderer;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <a class="code" href="class_twl_1_1_d_x12_renderer.html">Twl::DX12Renderer</a>* m_Renderer;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="comment">// The application instance handle that this application was created with.</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="comment">// I think this is just always NULL on x64.</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        HINSTANCE m_hInstance;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        std::wstring m_Name;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordtype">int</span> m_Width;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordtype">int</span> m_Height;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordtype">bool</span> m_vSync;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }; <span class="comment">//class Game</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;} <span class="comment">//namespace Jeremiah</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="comment">// The application instance handle that this application was created with.</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="comment">// I think this is just always NULL on x64.</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        HINSTANCE m_hInstance;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        std::wstring m_Name;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordtype">int</span> m_Width;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordtype">int</span> m_Height;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordtype">bool</span> m_vSync;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }; <span class="comment">//class Game</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;} <span class="comment">//namespace Jeremiah</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_jeremiah_1_1_game_html_aa91b7e7abf5fe4d7f804769436e06d54"><div class="ttname"><a href="class_jeremiah_1_1_game.html#aa91b7e7abf5fe4d7f804769436e06d54">Jeremiah::Game::OnMouseButtonReleased</a></div><div class="ttdeci">virtual void OnMouseButtonReleased(Jeremiah::MouseButtonEventArgs &amp;e)</div></div>
@@ -209,7 +207,7 @@ $(document).ready(function(){initNavTree('_game_8h_source.html',''); initResizab
 <div class="ttc" id="aclass_jeremiah_1_1_mouse_motion_event_args_html"><div class="ttname"><a href="class_jeremiah_1_1_mouse_motion_event_args.html">Jeremiah::MouseMotionEventArgs</a></div><div class="ttdef"><b>Definition:</b> Events.h:73</div></div>
 <div class="ttc" id="aclass_jeremiah_1_1_game_html_a0d6b475f9e9b3a76408d9e7413b0e1e9"><div class="ttname"><a href="class_jeremiah_1_1_game.html#a0d6b475f9e9b3a76408d9e7413b0e1e9">Jeremiah::Game::Quit</a></div><div class="ttdeci">void Quit(int exitCode=0)</div></div>
 <div class="ttc" id="aclass_jeremiah_1_1_game_html_a51c5212d7e366fb2e9c9dca09fc1ef13"><div class="ttname"><a href="class_jeremiah_1_1_game.html#a51c5212d7e366fb2e9c9dca09fc1ef13">Jeremiah::Game::Initialize</a></div><div class="ttdeci">virtual bool Initialize()</div></div>
-<div class="ttc" id="aclass_twl_1_1_d_x12_renderer_html"><div class="ttname"><a href="class_twl_1_1_d_x12_renderer.html">Twl::DX12Renderer</a></div><div class="ttdef"><b>Definition:</b> DX12Renderer.h:15</div></div>
+<div class="ttc" id="aclass_twl_1_1_d_x12_renderer_html"><div class="ttname"><a href="class_twl_1_1_d_x12_renderer.html">Twl::DX12Renderer</a></div><div class="ttdef"><b>Definition:</b> DX12Renderer.h:16</div></div>
 <div class="ttc" id="aclass_jeremiah_1_1_game_html_ac28e73f55e1b9c28b992de6adb99c7ff"><div class="ttname"><a href="class_jeremiah_1_1_game.html#ac28e73f55e1b9c28b992de6adb99c7ff">Jeremiah::Game::OnKeyPressed</a></div><div class="ttdeci">virtual void OnKeyPressed(Jeremiah::KeyEventArgs &amp;e)</div></div>
 <div class="ttc" id="aclass_jeremiah_1_1_render_event_args_html"><div class="ttname"><a href="class_jeremiah_1_1_render_event_args.html">Jeremiah::RenderEventArgs</a></div><div class="ttdef"><b>Definition:</b> Events.h:199</div></div>
 <div class="ttc" id="aclass_jeremiah_1_1_game_html_ad9e057f0b619162f8c437eb4f9de2915"><div class="ttname"><a href="class_jeremiah_1_1_game.html#ad9e057f0b619162f8c437eb4f9de2915">Jeremiah::Game::OnKeyReleased</a></div><div class="ttdeci">virtual void OnKeyReleased(Jeremiah::KeyEventArgs &amp;e)</div></div>
@@ -217,14 +215,14 @@ $(document).ready(function(){initNavTree('_game_8h_source.html',''); initResizab
 <div class="ttc" id="aclass_jeremiah_1_1_game_html_a63a5f48dee1e347bef5d6b6b21cda76f"><div class="ttname"><a href="class_jeremiah_1_1_game.html#a63a5f48dee1e347bef5d6b6b21cda76f">Jeremiah::Game::OnMouseButtonPressed</a></div><div class="ttdeci">virtual void OnMouseButtonPressed(Jeremiah::MouseButtonEventArgs &amp;e)</div></div>
 <div class="ttc" id="aclass_jeremiah_1_1_game_html_a08ba03a27dd117ee31e7a04e99bf3f75"><div class="ttname"><a href="class_jeremiah_1_1_game.html#a08ba03a27dd117ee31e7a04e99bf3f75">Jeremiah::Game::Game</a></div><div class="ttdeci">Game(HINSTANCE instance, const std::wstring &amp;name, int width, int height, bool vSync)</div></div>
 <div class="ttc" id="aclass_jeremiah_1_1_game_html_a506625f10dcda492370093024b607c5b"><div class="ttname"><a href="class_jeremiah_1_1_game.html#a506625f10dcda492370093024b607c5b">Jeremiah::Game::OnResize</a></div><div class="ttdeci">virtual void OnResize(Jeremiah::ResizeEventArgs &amp;e)</div></div>
-<div class="ttc" id="aclass_jeremiah_1_1_game_html"><div class="ttname"><a href="class_jeremiah_1_1_game.html">Jeremiah::Game</a></div><div class="ttdef"><b>Definition:</b> Game.h:50</div></div>
+<div class="ttc" id="aclass_jeremiah_1_1_game_html"><div class="ttname"><a href="class_jeremiah_1_1_game.html">Jeremiah::Game</a></div><div class="ttdef"><b>Definition:</b> Game.h:48</div></div>
 <div class="ttc" id="aclass_jeremiah_1_1_game_html_a137aeac9584d23317f4a78d1f1defbb7"><div class="ttname"><a href="class_jeremiah_1_1_game.html#a137aeac9584d23317f4a78d1f1defbb7">Jeremiah::Game::OnRender</a></div><div class="ttdeci">virtual void OnRender(Jeremiah::RenderEventArgs &amp;e)</div></div>
 <div class="ttc" id="aclass_jeremiah_1_1_key_event_args_html"><div class="ttname"><a href="class_jeremiah_1_1_key_event_args.html">Jeremiah::KeyEventArgs</a></div><div class="ttdef"><b>Definition:</b> Events.h:46</div></div>
 <div class="ttc" id="aclass_jeremiah_1_1_game_html_a24f6c33be76ac3b5c23bf20cf5a3601c"><div class="ttname"><a href="class_jeremiah_1_1_game.html#a24f6c33be76ac3b5c23bf20cf5a3601c">Jeremiah::Game::Destroy</a></div><div class="ttdeci">virtual void Destroy()</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_894dafc3112dcc2c88691c3e50df42eb.html">DirectX12</a></li><li class="navelem"><a class="el" href="_game_8h.html">Game.h</a></li>
+    <li class="navelem"><a class="el" href="dir_692516b589a32b3bfce781ca9f6d1534.html">Headers</a></li><li class="navelem"><a class="el" href="dir_f1abcdcbfd390108e06d4fe89b391a3e.html">DirectX12</a></li><li class="navelem"><a class="el" href="_game_8h.html">Game.h</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

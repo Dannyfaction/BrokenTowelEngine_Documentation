@@ -1,13 +1,16 @@
 var class_twl_1_1_core =
 [
     [ "Core", "class_twl_1_1_core.html#a3b78a4e1581bbf56afa546f86834a012", null ],
+    [ "DeltaTime", "class_twl_1_1_core.html#a32d19a559ab3d06afe49aa32cb37f477", null ],
+    [ "GetAudio", "class_twl_1_1_core.html#ab90c93a6195dbaeb1c77317f5c5d3aa1", null ],
     [ "GetCamera", "class_twl_1_1_core.html#a291656c1cf05afe4464aabee6d3d78da", null ],
     [ "GetInputManager", "class_twl_1_1_core.html#a5b9b1022500d587c22ccc6ea847bb2aa", null ],
     [ "GetResourceManager", "class_twl_1_1_core.html#aad150f9d206aee2a07089f099d1bbaa5", null ],
     [ "GetRootAssetsDirectory", "class_twl_1_1_core.html#aa97f3038d33efde8e4f9da5579394a3e", null ],
-    [ "GetSceneManager", "class_twl_1_1_core.html#aa03686c7e47dc49bea9bab1a7cecfb7d", null ],
+    [ "GetSceneManager", "class_twl_1_1_core.html#a70714c6b5fb038675c7eac1a786f7afc", null ],
     [ "GetScreenHeight", "class_twl_1_1_core.html#a62d091ee37e6c367cafa0203c5a18a35", null ],
     [ "GetScreenWidth", "class_twl_1_1_core.html#aea3b5d505df0980e61ed9f4f6340740b", null ],
+    [ "Initialize", "class_twl_1_1_core.html#a66ae6a8c81a21a7a59fa82f1d4baca0f", null ],
     [ "IsPaused", "class_twl_1_1_core.html#ac3bf25937db513a4c394305f130449c7", null ],
     [ "IsRunning", "class_twl_1_1_core.html#a2876a42eaf4b22d79156159c07bc1b88", null ],
     [ "operator=", "class_twl_1_1_core.html#a3850be6c7c0036e685ee506d87a1c996", null ],

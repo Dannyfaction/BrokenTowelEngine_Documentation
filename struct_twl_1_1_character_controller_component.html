@@ -97,33 +97,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a112efc2aef9c14fe55fcfe5a3ed35b75"><td class="memItemLeft" align="right" valign="top"><a id="a112efc2aef9c14fe55fcfe5a3ed35b75"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>CharacterControllerComponent</b> (<a class="el" href="class_twl_1_1_entity.html">Entity</a> *a_Entity)</td></tr>
 <tr class="separator:a112efc2aef9c14fe55fcfe5a3ed35b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d33f0a28d7847c5073977e9aa13bc06"><td class="memItemLeft" align="right" valign="top"><a id="a4d33f0a28d7847c5073977e9aa13bc06"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddForce</b> (glm::vec2 a_velocity)</td></tr>
-<tr class="separator:a4d33f0a28d7847c5073977e9aa13bc06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa23767a60c4b457f3ee17860898e04f6"><td class="memItemLeft" align="right" valign="top"><a id="aa23767a60c4b457f3ee17860898e04f6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Jump</b> (glm::vec2 a_velocity)</td></tr>
-<tr class="separator:aa23767a60c4b457f3ee17860898e04f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef893091f5390096c4f3c4eb8ad941aa"><td class="memItemLeft" align="right" valign="top"><a id="aef893091f5390096c4f3c4eb8ad941aa"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Reload</b> ()</td></tr>
 <tr class="separator:aef893091f5390096c4f3c4eb8ad941aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24adfdba37b3219d464cd2d705c31f5a"><td class="memItemLeft" align="right" valign="top"><a id="a24adfdba37b3219d464cd2d705c31f5a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Crouch</b> ()</td></tr>
-<tr class="separator:a24adfdba37b3219d464cd2d705c31f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45cccd5461707e3bc90bb02c0a6818b7"><td class="memItemLeft" align="right" valign="top"><a id="a45cccd5461707e3bc90bb02c0a6818b7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>TakeDamage</b> (int a_Amount)</td></tr>
 <tr class="separator:a45cccd5461707e3bc90bb02c0a6818b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:acf2111ed456d1d5ccc90348b218c2c1b"><td class="memItemLeft" align="right" valign="top"><a id="acf2111ed456d1d5ccc90348b218c2c1b"></a>
-glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><b>Velocity</b></td></tr>
-<tr class="separator:acf2111ed456d1d5ccc90348b218c2c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf2eac505195923e7fd4c31677dbd2b0"><td class="memItemLeft" align="right" valign="top"><a id="adf2eac505195923e7fd4c31677dbd2b0"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentHealth</b></td></tr>
-<tr class="separator:adf2eac505195923e7fd4c31677dbd2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dda226bb3076c93bd8dc028ca75d70c"><td class="memItemLeft" align="right" valign="top"><a id="a9dda226bb3076c93bd8dc028ca75d70c"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxHealth</b></td></tr>
 <tr class="separator:a9dda226bb3076c93bd8dc028ca75d70c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf2eac505195923e7fd4c31677dbd2b0"><td class="memItemLeft" align="right" valign="top"><a id="adf2eac505195923e7fd4c31677dbd2b0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentHealth</b></td></tr>
+<tr class="separator:adf2eac505195923e7fd4c31677dbd2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad26cbd6fd1d959b7fd5f73d6d1ad240d"><td class="memItemLeft" align="right" valign="top"><a id="ad26cbd6fd1d959b7fd5f73d6d1ad240d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsGunReloaded</b></td></tr>
 <tr class="separator:ad26cbd6fd1d959b7fd5f73d6d1ad240d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,13 +127,40 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>JumpForce</b></td></tr
 <tr class="memitem:ab0960d25d97fbfa58ae71c8a958e1277"><td class="memItemLeft" align="right" valign="top"><a id="ab0960d25d97fbfa58ae71c8a958e1277"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>CanJump</b></td></tr>
 <tr class="separator:ab0960d25d97fbfa58ae71c8a958e1277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae90a8ab554d743c9313b2056ada236cb"><td class="memItemLeft" align="right" valign="top"><a id="ae90a8ab554d743c9313b2056ada236cb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isCrouching</b></td></tr>
+<tr class="separator:ae90a8ab554d743c9313b2056ada236cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaef2150c83b209914884855a5d4f9d7f"><td class="memItemLeft" align="right" valign="top"><a id="aaef2150c83b209914884855a5d4f9d7f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>JumpPressed</b></td></tr>
+<tr class="separator:aaef2150c83b209914884855a5d4f9d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdb753e8ceffe959dc691861f068cdb8"><td class="memItemLeft" align="right" valign="top"><a id="acdb753e8ceffe959dc691861f068cdb8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>CoyoteJumpTimer</b></td></tr>
+<tr class="separator:acdb753e8ceffe959dc691861f068cdb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a986eebf9ba231c0a92022ab5b18bca6a"><td class="memItemLeft" align="right" valign="top"><a id="a986eebf9ba231c0a92022ab5b18bca6a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>JumpBufferingTimer</b></td></tr>
+<tr class="separator:a986eebf9ba231c0a92022ab5b18bca6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46687df67a4eba4bd3999505b7a49c95"><td class="memItemLeft" align="right" valign="top"><a id="a46687df67a4eba4bd3999505b7a49c95"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>CoyoteJumpMaxTimer</b></td></tr>
+<tr class="separator:a46687df67a4eba4bd3999505b7a49c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4da826f9a0ad7be35efb6b5f6185ac5"><td class="memItemLeft" align="right" valign="top"><a id="af4da826f9a0ad7be35efb6b5f6185ac5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>JumpBufferingMaxTimer</b></td></tr>
+<tr class="separator:af4da826f9a0ad7be35efb6b5f6185ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b6c2a94b22de7a9271b4090aec09012"><td class="memItemLeft" align="right" valign="top"><a id="a4b6c2a94b22de7a9271b4090aec09012"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>Gravity</b></td></tr>
+<tr class="separator:a4b6c2a94b22de7a9271b4090aec09012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a2aa74ecdb703ffb8d60af403f12f3e"><td class="memItemLeft" align="right" valign="top"><a id="a4a2aa74ecdb703ffb8d60af403f12f3e"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>StoppingGravity</b></td></tr>
+<tr class="separator:a4a2aa74ecdb703ffb8d60af403f12f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae4d422122f89fe70aa6eb004862b678"><td class="memItemLeft" align="right" valign="top"><a id="aae4d422122f89fe70aa6eb004862b678"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>CrouchMultiplier</b></td></tr>
+<tr class="separator:aae4d422122f89fe70aa6eb004862b678"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_struct_twl_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_struct_twl_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="struct_twl_1_1_component.html">Twl::Component</a></td></tr>
 <tr class="memitem:acf47dd992dd9fa7da301b2f068bdb4cb inherit pub_attribs_struct_twl_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="acf47dd992dd9fa7da301b2f068bdb4cb"></a>
 <a class="el" href="class_twl_1_1_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>entity</b></td></tr>
 <tr class="separator:acf47dd992dd9fa7da301b2f068bdb4cb inherit pub_attribs_struct_twl_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>ComponentSystem/Components/<a class="el" href="_character_controller_component_8h_source.html">CharacterControllerComponent.h</a></li>
+<li>Headers/ComponentSystem/Components/<a class="el" href="_character_controller_component_8h_source.html">CharacterControllerComponent.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

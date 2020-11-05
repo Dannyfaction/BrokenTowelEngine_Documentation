@@ -1,6 +1,31 @@
 var struct_twl_1_1_transform_component =
 [
     [ "TransformComponent", "struct_twl_1_1_transform_component.html#a517994aed2f0abb4085dc0a4d81b134c", null ],
-    [ "TransformComponent", "struct_twl_1_1_transform_component.html#a0a1a64b9fcdf1f13c7643208b21e0efa", null ],
-    [ "position", "struct_twl_1_1_transform_component.html#ab5cdd7f7a435f6f2ce0d677ca5433429", null ]
+    [ "TransformComponent", "struct_twl_1_1_transform_component.html#a6882586b3531bb447b0f1fc9ee9b9c74", null ],
+    [ "GetBackward", "struct_twl_1_1_transform_component.html#a5b0d95845d2f18e19c187b73ef594981", null ],
+    [ "GetDown", "struct_twl_1_1_transform_component.html#a7f6e8eb2f2791fee4f095c86c33a4502", null ],
+    [ "GetEulerAngles", "struct_twl_1_1_transform_component.html#a73fe1fc8523064dfe7683b765662bb6a", null ],
+    [ "GetForward", "struct_twl_1_1_transform_component.html#a59df62fc285a7ca447374dff8374b363", null ],
+    [ "GetLeft", "struct_twl_1_1_transform_component.html#ac839c748b97a2601b376690b7ce74da6", null ],
+    [ "GetMatrix", "struct_twl_1_1_transform_component.html#aa11c980aceb260577249564464364b3f", null ],
+    [ "GetPosition", "struct_twl_1_1_transform_component.html#a1b9f9873ae19eba50cb9585ad2b1cbc2", null ],
+    [ "GetRight", "struct_twl_1_1_transform_component.html#a20f441a98c21ea9b3a2bbcb46c6ebce4", null ],
+    [ "GetRotation", "struct_twl_1_1_transform_component.html#a6ea35687e3bc347236afd53f9fdbdf9e", null ],
+    [ "GetScale", "struct_twl_1_1_transform_component.html#a16b466d58cf66f9bcec67e395b065702", null ],
+    [ "GetUp", "struct_twl_1_1_transform_component.html#ae64edad656b07e8092d0a1b422c29a08", null ],
+    [ "Rotate", "struct_twl_1_1_transform_component.html#a0f6ea09a559683cc544cff3051603dad", null ],
+    [ "SetEulerAngles", "struct_twl_1_1_transform_component.html#a595c04476d7e5b49bbf5a7487a3678a7", null ],
+    [ "SetPosition", "struct_twl_1_1_transform_component.html#af85f5f05ab8f91d16db193bf11ed4950", null ],
+    [ "SetRotation", "struct_twl_1_1_transform_component.html#ae152edb34f83d56c03b73bc3929f679a", null ],
+    [ "SetScale", "struct_twl_1_1_transform_component.html#ae034442ad295cae44713c479f611a8f3", null ],
+    [ "Translate", "struct_twl_1_1_transform_component.html#a03914bd5960fe3cb3be71e4cc6b89d61", null ],
+    [ "dirtyFlag", "struct_twl_1_1_transform_component.html#a581feaf6019db2c3167916c13ec2e61e", null ],
+    [ "Forward", "struct_twl_1_1_transform_component.html#a4630a87a2a777f2d4bee3e1ee460f0d1", null ],
+    [ "ModelMatrix", "struct_twl_1_1_transform_component.html#a5c72ce6022f9be1fdaeed9fec6286f26", null ],
+    [ "Position", "struct_twl_1_1_transform_component.html#aeeda1f98f8727d5cfd8efc929f4e3327", null ],
+    [ "qRotation", "struct_twl_1_1_transform_component.html#a2457904619c028ea834a0c4671c5686f", null ],
+    [ "Right", "struct_twl_1_1_transform_component.html#ab499d5b1b32007522f202d574a65308e", null ],
+    [ "Rotation", "struct_twl_1_1_transform_component.html#a7c0137f70eaac3f8933cdb20822bb614", null ],
+    [ "Scale", "struct_twl_1_1_transform_component.html#a8e46ac682ace37805a059843691055fc", null ],
+    [ "Up", "struct_twl_1_1_transform_component.html#a4aa1d2cc1be1b48a5cf6fe0eec8473b2", null ]
 ];

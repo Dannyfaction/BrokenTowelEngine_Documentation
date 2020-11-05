@@ -97,9 +97,36 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af12886f1b9db7d871de8d1feebda4a29"><td class="memItemLeft" align="right" valign="top"><a id="af12886f1b9db7d871de8d1feebda4a29"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AIControllerComponent</b> (<a class="el" href="class_twl_1_1_entity.html">Entity</a> *a_Entity, <a class="el" href="class_twl_1_1_behaviour.html">Behaviour</a> *a_Behaviour)</td></tr>
 <tr class="separator:af12886f1b9db7d871de8d1feebda4a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e5cd6bbcd521fd9d8f3b680142571a9"><td class="memItemLeft" align="right" valign="top"><a id="a7e5cd6bbcd521fd9d8f3b680142571a9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AIControllerComponent</b> (<a class="el" href="class_twl_1_1_entity.html">Entity</a> *a_Entity, <a class="el" href="class_twl_1_1_behaviour.html">Behaviour</a> *a_Behaviour, int a_Health, int a_DamagePower)</td></tr>
+<tr class="separator:a7e5cd6bbcd521fd9d8f3b680142571a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab29191ed8ac1f852f0f704d05da4776d"><td class="memItemLeft" align="right" valign="top"><a id="ab29191ed8ac1f852f0f704d05da4776d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>TakeDamage</b> (int a_AmountDamage)</td></tr>
+<tr class="separator:ab29191ed8ac1f852f0f704d05da4776d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92322d75e170f24b693b4559d06eb913"><td class="memItemLeft" align="right" valign="top"><a id="a92322d75e170f24b693b4559d06eb913"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetHealth</b> ()</td></tr>
+<tr class="separator:a92322d75e170f24b693b4559d06eb913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa332b303b039a427afe491b72bc1d44c"><td class="memItemLeft" align="right" valign="top"><a id="aa332b303b039a427afe491b72bc1d44c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetHealth</b> (int a_Health)</td></tr>
+<tr class="separator:aa332b303b039a427afe491b72bc1d44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bd922ec5c05525e5cd508d706f1e1ab"><td class="memItemLeft" align="right" valign="top"><a id="a9bd922ec5c05525e5cd508d706f1e1ab"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>GetPlayersPosition</b> ()</td></tr>
+<tr class="separator:a9bd922ec5c05525e5cd508d706f1e1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad71740f3e705d38ed4e73631696f28e0"><td class="memItemLeft" align="right" valign="top"><a id="ad71740f3e705d38ed4e73631696f28e0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPlayersPosition</b> (glm::vec3 a_PlayersPosition)</td></tr>
+<tr class="separator:ad71740f3e705d38ed4e73631696f28e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:ac4b3f457e5e7aad6054955ea0de89432"><td class="memItemLeft" align="right" valign="top"><a id="ac4b3f457e5e7aad6054955ea0de89432"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>health</b></td></tr>
+<tr class="separator:ac4b3f457e5e7aad6054955ea0de89432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6e5f0a163ba717374aef2791c609962"><td class="memItemLeft" align="right" valign="top"><a id="ad6e5f0a163ba717374aef2791c609962"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>damagePower</b></td></tr>
+<tr class="separator:ad6e5f0a163ba717374aef2791c609962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05840cdbac8062a0c5d2a7b23d74f019"><td class="memItemLeft" align="right" valign="top"><a id="a05840cdbac8062a0c5d2a7b23d74f019"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>playersPosition</b></td></tr>
+<tr class="separator:a05840cdbac8062a0c5d2a7b23d74f019"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed3bad1b3abdd252cfeb0806427fa843"><td class="memItemLeft" align="right" valign="top"><a id="aed3bad1b3abdd252cfeb0806427fa843"></a>
 <a class="el" href="class_twl_1_1_behaviour.html">Behaviour</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>behaviour</b></td></tr>
 <tr class="separator:aed3bad1b3abdd252cfeb0806427fa843"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,7 +136,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:acf47dd992dd9fa7da301b2f068bdb4cb inherit pub_attribs_struct_twl_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>ComponentSystem/Components/<a class="el" href="_a_i_controller_component_8h_source.html">AIControllerComponent.h</a></li>
+<li>Headers/ComponentSystem/Components/<a class="el" href="_a_i_controller_component_8h_source.html">AIControllerComponent.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
